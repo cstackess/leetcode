@@ -2,6 +2,7 @@
  * Created by Administrator on 2016/2/3.
  */
 public class Solution {
+    //毫无疑问，转成数字计算再转回来的方法效率更差。还是要对链接表直接操作。
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode p1 = l1;
         ListNode p2 = l2;
