@@ -10,17 +10,17 @@ public class SolutionTest {
     public void test_1() {
         //given
         Solution solution = new Solution();
-        String text = "abcddcaa";
+        String text = "dmaa";
         //when
         String longestPalindrome = solution.longestPalindrome(text);
         //then
-        assertEquals("cddc", longestPalindrome);
+        assertEquals("aa", longestPalindrome);
     }
     @Test
     public void test_2() {
         //given
         Solution solution = new Solution();
-        String text = "abcdddddcaa";
+        String text = "abcdddddcaa";//奇数多个
         //when
         String longestPalindrome = solution.longestPalindrome(text);
         //then
@@ -30,7 +30,7 @@ public class SolutionTest {
     public void test_3() {
         //given
         Solution solution = new Solution();
-        String text = "abcdcdcaa";
+        String text = "cdcdc";//奇数单个，需3个指示器
         //when
         String longestPalindrome = solution.longestPalindrome(text);
         //then
@@ -40,11 +40,29 @@ public class SolutionTest {
     public void test_4() {
         //given
         Solution solution = new Solution();
-        String text = "abcddcaabbbbcccbbbaa";
+        String text = "abcddcaabbbbcccbbbbaa";//更长
         //when
         String longestPalindrome = solution.longestPalindrome(text);
         //then
-        assertEquals("aabbbbcccbbbaa", longestPalindrome);
+        assertEquals("aabbbbcccbbbbaa", longestPalindrome);
     }
-
+    @Test
+    public void test_5() {
+        //given
+        Solution solution = new Solution();
+        String text = "aabbaabbaa";
+        //when
+        String longestPalindrome = solution.longestPalindrome(text);
+        //then
+        assertEquals("aabbaabbaa", longestPalindrome);
+    }
+    @Test
+    public void test_6() {
+        //given
+        Solution solution = new Solution();
+        String text = "aaabaaaa";
+        String longestPalindrome = solution.longestPalindrome(text);
+        //then
+        assertEquals("aaabaaa", longestPalindrome);
+    }
 }
