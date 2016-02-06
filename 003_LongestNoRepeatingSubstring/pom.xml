@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.stackess</groupId>
-    <artifactId>003_LongestSubString</artifactId>
+    <artifactId>003_LongestNoRepeatingSubstring</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>

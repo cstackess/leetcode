@@ -1,8 +1,45 @@
+import java.util.Arrays;
+
 /**
  * Created by Administrator on 2016/2/4.
  */
 public class Solution {
-    //改了半天才AC，说明不是好算法，我估计应该用递归
+    //加了cache还超时,1000个b要24ms，另一种3ms，心好痛……
+/*
+    int[][] cache;
+    public String longestPalindrome(String s) {
+        char[] chars = s.toCharArray();
+        cache = new int[chars.length][chars.length];
+        int maxLength = 0;
+        int maxLeft = 0;
+        int maxRight = 0;
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = i + 1; j < chars.length; j++) {
+                if (isPalindrome(chars, i, j) && j - i + 1 > maxLength) {
+                    maxLeft = i;
+                    maxRight = j;
+                    maxLength = maxRight - maxLeft + 1;
+                }
+            }
+        }
+        return s.substring(maxLeft, maxRight + 1);
+    }
+
+    public boolean isPalindrome(char[] chars, int p, int q) {
+        if (cache[p][q] == 0) {
+            if (q - p <= 0) return true;//-1（aa）或者0（aba）
+            if (chars[p] == chars[q]) {
+                boolean isPld = isPalindrome(chars, p + 1, q - 1);
+                cache[p][q] = isPld ? 1 : -1;
+                return isPld;
+            } else
+                return false;
+        } else {
+            return cache[p][q] > 0;
+        }
+    }
+*/
+    //改了半天才AC，然而算法效率高
     public String longestPalindrome(String s) {
         char[] chars = s.toCharArray();
         if (chars.length == 1) return s;
