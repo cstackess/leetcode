@@ -1,2 +1,6 @@
 # leetcode
-sometimes we have to practice the leetcode you know...
+记录自己刷题的过程，同时也在看《算法导论》。
+
+基本按顺序做，每一题都用java写，部分用例经Junit单元测试通过，另外偶尔记录点思路，其中的伪代码打算按《算法导论》一书中2.1节的**伪代码约定**来写。
+
+

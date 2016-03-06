@@ -18,10 +18,9 @@ public class SolutionTest {
         //when
         int[] result = solution.twoSum(numbers, target);
         //then
-        assertEquals(1, result[0]);
-        assertEquals(2, result[1]);
+        assertEquals(0, result[0]);
+        assertEquals(1, result[1]);
     }
-
 
     @Test
     public void test_2() {
@@ -33,8 +32,8 @@ public class SolutionTest {
         int[] result = solution.twoSum(numbers, target);
         //then
         System.out.println(Arrays.toString(result));
-        assertEquals(1, result[0]);
-        assertEquals(4, result[1]);
+        assertEquals(0, result[0]);
+        assertEquals(3, result[1]);
     }
 
     @Test
@@ -46,14 +45,20 @@ public class SolutionTest {
         //when
         int[] result = solution.twoSum(numbers, target);
         //then
-        assertEquals(2, result[0]);
-        assertEquals(3, result[1]);
+        assertEquals(1, result[0]);
+        assertEquals(2, result[1]);
     }
 
     @Test
-    public void test_binarySearch() {
-        int[] arr = new int[]{4, 3, 0};
-        Arrays.sort(arr);
-        assertFalse(2 == Arrays.binarySearch(arr, 0));
+    public void test_4() {
+        //given
+        Solution solution = new Solution();
+        int[] numbers = {2, 1, 9, 4, 4, 56, 90, 3};
+        int target = 8;
+        //when
+        int[] result = solution.twoSum(numbers, target);
+        //then
+        assertEquals(3, result[0]);
+        assertEquals(4, result[1]);
     }
 }
