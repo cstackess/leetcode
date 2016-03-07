@@ -1,6 +1,7 @@
 # 002 Add Two Numbers
 ## Question
 [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)
+
 You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
 > Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
@@ -98,4 +99,5 @@ return head.next    //根据题意，这里得是head.next
 ```
 
 一般来说，在写代码的的时候哨兵法更不容易出错，但效率低一点点。
+
 综上，复杂度是系数较小的$O(max{l1,l2})$。
